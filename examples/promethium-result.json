@@ -1,0 +1,796 @@
+{
+  "description": "原问题先检查地点；替代方案为玄冥星产量子处理器、平台产黑瓶。以下仅演示冷液补充量对应的装桶材料，不声称需要把冷液运往新地星，也未计算完整星际运输成本。",
+  "originalQuestion": {
+    "error": {
+      "code": "LOCATION_CONFLICT",
+      "message": "指定地点无法执行所需配方。请调整生产地点或改为输入成品中间物料，不要继续给出不可执行的产线数值。",
+      "details": {
+        "location": "nauvis",
+        "recipes": [
+          {
+            "id": "promethium-science-pack",
+            "name": "钷素科技包（黑瓶）",
+            "allowedLocations": [
+              "space-platform"
+            ],
+            "producerLocations": [
+              {
+                "id": "cryogenic-plant",
+                "locations": []
+              }
+            ]
+          }
+        ],
+        "provenance": {
+          "dataset": "2x1",
+          "name": "Space Age 2.1",
+          "version": {
+            "base": "2.1.20",
+            "elevated-rails": "2.1.20",
+            "quality": "2.1.20",
+            "recycler": "2.1.20",
+            "space-age": "2.1.20"
+          },
+          "sha256": "6ac871bd8e2970c70e35b6750a23eb3e7a25c2d7a869a1bcd473255a88c03fb8",
+          "repository": "https://github.com/factoriolab/factoriolab",
+          "commit": "eef44c6be28e251a22a211c2302ed43368d09ed0",
+          "source": "https://github.com/factoriolab/factoriolab/blob/eef44c6be28e251a22a211c2302ed43368d09ed0/public/data/2x1/data.json"
+        }
+      }
+    }
+  },
+  "sourceRecipe": {
+    "id": "quantum-processor",
+    "name": "量子处理器",
+    "provenance": {
+      "dataset": "2x1",
+      "name": "Space Age 2.1",
+      "version": {
+        "base": "2.1.20",
+        "elevated-rails": "2.1.20",
+        "quality": "2.1.20",
+        "recycler": "2.1.20",
+        "space-age": "2.1.20"
+      },
+      "sha256": "6ac871bd8e2970c70e35b6750a23eb3e7a25c2d7a869a1bcd473255a88c03fb8",
+      "repository": "https://github.com/factoriolab/factoriolab",
+      "commit": "eef44c6be28e251a22a211c2302ed43368d09ed0",
+      "source": "https://github.com/factoriolab/factoriolab/blob/eef44c6be28e251a22a211c2302ed43368d09ed0/public/data/2x1/data.json"
+    },
+    "base": {
+      "timeSeconds": 30,
+      "inputs": [
+        {
+          "id": "tungsten-carbide",
+          "name": "碳化钨",
+          "quantity": 1
+        },
+        {
+          "id": "processing-unit",
+          "name": "处理器",
+          "quantity": 1
+        },
+        {
+          "id": "superconductor",
+          "name": "超导体",
+          "quantity": 1
+        },
+        {
+          "id": "carbon-fiber",
+          "name": "碳纤维",
+          "quantity": 1
+        },
+        {
+          "id": "lithium-plate",
+          "name": "锂板",
+          "quantity": 2
+        },
+        {
+          "id": "fluoroketone-cold",
+          "name": "氟酮（冷）",
+          "quantity": 10
+        }
+      ],
+      "outputs": [
+        {
+          "id": "quantum-processor",
+          "name": "量子处理器",
+          "quantity": 1
+        },
+        {
+          "id": "fluoroketone-hot",
+          "name": "氟酮（热）",
+          "quantity": 5
+        }
+      ],
+      "catalyst": {
+        "fluoroketone-hot": 5
+      },
+      "producers": [
+        "electromagnetic-plant"
+      ],
+      "producerLocations": [
+        {
+          "id": "electromagnetic-plant",
+          "locations": []
+        }
+      ],
+      "locations": [
+        "space-platform",
+        "aquilo"
+      ],
+      "disallowedEffects": [],
+      "researchProductivityAvailable": false
+    },
+    "adjusted": {
+      "machine": "electromagnetic-plant",
+      "quality": "normal",
+      "modules": [],
+      "productivityMultiplier": 1.5,
+      "speed": 2,
+      "secondsPerCraft": 15,
+      "inputs": [
+        {
+          "id": "tungsten-carbide",
+          "name": "碳化钨",
+          "quantity": 1
+        },
+        {
+          "id": "processing-unit",
+          "name": "处理器",
+          "quantity": 1
+        },
+        {
+          "id": "superconductor",
+          "name": "超导体",
+          "quantity": 1
+        },
+        {
+          "id": "carbon-fiber",
+          "name": "碳纤维",
+          "quantity": 1
+        },
+        {
+          "id": "lithium-plate",
+          "name": "锂板",
+          "quantity": 2
+        },
+        {
+          "id": "fluoroketone-cold",
+          "name": "氟酮（冷）",
+          "quantity": 10
+        }
+      ],
+      "outputs": [
+        {
+          "id": "quantum-processor",
+          "name": "量子处理器",
+          "quantity": 1.5
+        },
+        {
+          "id": "fluoroketone-hot",
+          "name": "氟酮（热）",
+          "quantity": 5
+        }
+      ]
+    },
+    "note": "未指定机器时采用配方 producers 列表中的第一台；物品为普通品质。没有 locations 表示快照未列出额外配方地点限制。"
+  },
+  "scienceOnPlatform": {
+    "provenance": {
+      "dataset": "2x1",
+      "name": "Space Age 2.1",
+      "version": {
+        "base": "2.1.20",
+        "elevated-rails": "2.1.20",
+        "quality": "2.1.20",
+        "recycler": "2.1.20",
+        "space-age": "2.1.20"
+      },
+      "sha256": "6ac871bd8e2970c70e35b6750a23eb3e7a25c2d7a869a1bcd473255a88c03fb8",
+      "repository": "https://github.com/factoriolab/factoriolab",
+      "commit": "eef44c6be28e251a22a211c2302ed43368d09ed0",
+      "source": "https://github.com/factoriolab/factoriolab/blob/eef44c6be28e251a22a211c2302ed43368d09ed0/public/data/2x1/data.json"
+    },
+    "rateUnit": "per_minute",
+    "location": "space-platform",
+    "targets": [
+      {
+        "id": "promethium-science-pack",
+        "name": "钷素科技包（黑瓶）",
+        "rate": 120
+      }
+    ],
+    "inputs": [
+      {
+        "id": "promethium-asteroid-chunk",
+        "name": "钷素星块",
+        "rate": 300.000000001,
+        "reason": "no_available_producing_recipe_in_scope"
+      },
+      {
+        "id": "quantum-processor",
+        "name": "量子处理器",
+        "rate": 12,
+        "reason": "no_available_producing_recipe_in_scope"
+      },
+      {
+        "id": "biter-egg",
+        "name": "异虫卵",
+        "rate": 120,
+        "reason": "no_available_producing_recipe_in_scope"
+      }
+    ],
+    "surplus": [],
+    "steps": [
+      {
+        "id": "promethium-science-pack",
+        "name": "钷素科技包（黑瓶）",
+        "craftsPerMinute": 12,
+        "machine": "cryogenic-plant",
+        "quality": "normal",
+        "modules": [],
+        "productivityBonus": 0,
+        "productivityMultiplier": 1,
+        "speed": 2,
+        "machines": 0.5,
+        "allowedLocations": [
+          "space-platform"
+        ],
+        "machineAllowedLocations": [],
+        "inputsPerCraft": {
+          "promethium-asteroid-chunk": 25,
+          "quantum-processor": 1,
+          "biter-egg": 10
+        },
+        "outputsPerCraft": {
+          "promethium-science-pack": 10
+        },
+        "source": "https://github.com/factoriolab/factoriolab/blob/eef44c6be28e251a22a211c2302ed43368d09ed0/public/data/2x1/data.json"
+      }
+    ],
+    "flows": [
+      {
+        "id": "promethium-science-pack",
+        "name": "钷素科技包（黑瓶）",
+        "produced": 120,
+        "consumed": 0,
+        "imported": 0,
+        "target": 120,
+        "surplus": 0
+      },
+      {
+        "id": "promethium-asteroid-chunk",
+        "name": "钷素星块",
+        "produced": 0,
+        "consumed": 300,
+        "imported": 300.000000001,
+        "target": 0,
+        "surplus": 1.00010311144e-9
+      },
+      {
+        "id": "quantum-processor",
+        "name": "量子处理器",
+        "produced": 0,
+        "consumed": 12,
+        "imported": 12,
+        "target": 0,
+        "surplus": 0
+      },
+      {
+        "id": "biter-egg",
+        "name": "异虫卵",
+        "produced": 0,
+        "consumed": 120,
+        "imported": 120,
+        "target": 0,
+        "surplus": 0
+      }
+    ],
+    "maxBalanceError": 2.842170943040401e-14,
+    "startupInventory": null,
+    "accountingScope": "recipe_materials_only",
+    "acquisition": [],
+    "warnings": [],
+    "assumptions": [
+      "默认普通品质产物、无插件、无研究加成；机器采用各配方首个 producer，已计入机器自带增产。显式 settings 会覆盖默认配置。",
+      "所有结果统一为每分钟。没有 location 时允许跨地点生产，步骤保留地点限制，不能把整条链解释为在同一星球生产。",
+      "外部输入和不能在所选配方范围内生产的物料作为计算边界；inputs 是边界需求，不等于这些物料能在当地开采。",
+      "优先最小化边界物品需求之和（流体权重 0.1），再最小化基础配方时间；这不是运输成本或玩家建造成本最优。"
+    ],
+    "limitations": [
+      "不计算电力、燃料、热量、腐败时效、火箭/平台运行成本或物流延迟。",
+      "循环启动库存需额外提供管道容量、设备缓存和物流周期；稳态配方无法确定。",
+      "不计算品质插件随机产物、信标、采矿研究及资源耗尽、科技解锁进度。"
+    ]
+  },
+  "quantumOnAquiloOpen": {
+    "provenance": {
+      "dataset": "2x1",
+      "name": "Space Age 2.1",
+      "version": {
+        "base": "2.1.20",
+        "elevated-rails": "2.1.20",
+        "quality": "2.1.20",
+        "recycler": "2.1.20",
+        "space-age": "2.1.20"
+      },
+      "sha256": "6ac871bd8e2970c70e35b6750a23eb3e7a25c2d7a869a1bcd473255a88c03fb8",
+      "repository": "https://github.com/factoriolab/factoriolab",
+      "commit": "eef44c6be28e251a22a211c2302ed43368d09ed0",
+      "source": "https://github.com/factoriolab/factoriolab/blob/eef44c6be28e251a22a211c2302ed43368d09ed0/public/data/2x1/data.json"
+    },
+    "rateUnit": "per_minute",
+    "location": "aquilo",
+    "targets": [
+      {
+        "id": "quantum-processor",
+        "name": "量子处理器",
+        "rate": 12
+      }
+    ],
+    "inputs": [
+      {
+        "id": "tungsten-carbide",
+        "name": "碳化钨",
+        "rate": 8,
+        "reason": "no_available_producing_recipe_in_scope"
+      },
+      {
+        "id": "processing-unit",
+        "name": "处理器",
+        "rate": 8,
+        "reason": "no_available_producing_recipe_in_scope"
+      },
+      {
+        "id": "superconductor",
+        "name": "超导体",
+        "rate": 8,
+        "reason": "no_available_producing_recipe_in_scope"
+      },
+      {
+        "id": "carbon-fiber",
+        "name": "碳纤维",
+        "rate": 8,
+        "reason": "no_available_producing_recipe_in_scope"
+      },
+      {
+        "id": "lithium-plate",
+        "name": "锂板",
+        "rate": 16,
+        "reason": "no_available_producing_recipe_in_scope"
+      },
+      {
+        "id": "fluoroketone-cold",
+        "name": "氟酮（冷）",
+        "rate": 80,
+        "reason": "no_available_producing_recipe_in_scope"
+      }
+    ],
+    "surplus": [
+      {
+        "id": "fluoroketone-hot",
+        "name": "氟酮（热）",
+        "rate": 40
+      }
+    ],
+    "steps": [
+      {
+        "id": "quantum-processor",
+        "name": "量子处理器",
+        "craftsPerMinute": 8,
+        "machine": "electromagnetic-plant",
+        "quality": "normal",
+        "modules": [],
+        "productivityBonus": 0,
+        "productivityMultiplier": 1.5,
+        "speed": 2,
+        "machines": 2,
+        "allowedLocations": [
+          "space-platform",
+          "aquilo"
+        ],
+        "machineAllowedLocations": [],
+        "inputsPerCraft": {
+          "tungsten-carbide": 1,
+          "processing-unit": 1,
+          "superconductor": 1,
+          "carbon-fiber": 1,
+          "lithium-plate": 2,
+          "fluoroketone-cold": 10
+        },
+        "outputsPerCraft": {
+          "quantum-processor": 1.5,
+          "fluoroketone-hot": 5
+        },
+        "source": "https://github.com/factoriolab/factoriolab/blob/eef44c6be28e251a22a211c2302ed43368d09ed0/public/data/2x1/data.json"
+      }
+    ],
+    "flows": [
+      {
+        "id": "quantum-processor",
+        "name": "量子处理器",
+        "produced": 12,
+        "consumed": 0,
+        "imported": 0,
+        "target": 12,
+        "surplus": 0
+      },
+      {
+        "id": "tungsten-carbide",
+        "name": "碳化钨",
+        "produced": 0,
+        "consumed": 8,
+        "imported": 8,
+        "target": 0,
+        "surplus": 0
+      },
+      {
+        "id": "processing-unit",
+        "name": "处理器",
+        "produced": 0,
+        "consumed": 8,
+        "imported": 8,
+        "target": 0,
+        "surplus": 0
+      },
+      {
+        "id": "superconductor",
+        "name": "超导体",
+        "produced": 0,
+        "consumed": 8,
+        "imported": 8,
+        "target": 0,
+        "surplus": 0
+      },
+      {
+        "id": "carbon-fiber",
+        "name": "碳纤维",
+        "produced": 0,
+        "consumed": 8,
+        "imported": 8,
+        "target": 0,
+        "surplus": 0
+      },
+      {
+        "id": "lithium-plate",
+        "name": "锂板",
+        "produced": 0,
+        "consumed": 16,
+        "imported": 16,
+        "target": 0,
+        "surplus": 0
+      },
+      {
+        "id": "fluoroketone-cold",
+        "name": "氟酮（冷）",
+        "produced": 0,
+        "consumed": 80,
+        "imported": 80,
+        "target": 0,
+        "surplus": 0
+      },
+      {
+        "id": "fluoroketone-hot",
+        "name": "氟酮（热）",
+        "produced": 40,
+        "consumed": 0,
+        "imported": 0,
+        "target": 0,
+        "surplus": 40
+      }
+    ],
+    "maxBalanceError": 0,
+    "startupInventory": null,
+    "accountingScope": "recipe_materials_only",
+    "acquisition": [],
+    "warnings": [],
+    "assumptions": [
+      "默认普通品质产物、无插件、无研究加成；机器采用各配方首个 producer，已计入机器自带增产。显式 settings 会覆盖默认配置。",
+      "所有结果统一为每分钟。没有 location 时允许跨地点生产，步骤保留地点限制，不能把整条链解释为在同一星球生产。",
+      "外部输入和不能在所选配方范围内生产的物料作为计算边界；inputs 是边界需求，不等于这些物料能在当地开采。",
+      "优先最小化边界物品需求之和（流体权重 0.1），再最小化基础配方时间；这不是运输成本或玩家建造成本最优。"
+    ],
+    "limitations": [
+      "不计算电力、燃料、热量、腐败时效、火箭/平台运行成本或物流延迟。",
+      "循环启动库存需额外提供管道容量、设备缓存和物流周期；稳态配方无法确定。",
+      "不计算品质插件随机产物、信标、采矿研究及资源耗尽、科技解锁进度。"
+    ]
+  },
+  "quantumOnAquiloCoolingLoop": {
+    "provenance": {
+      "dataset": "2x1",
+      "name": "Space Age 2.1",
+      "version": {
+        "base": "2.1.20",
+        "elevated-rails": "2.1.20",
+        "quality": "2.1.20",
+        "recycler": "2.1.20",
+        "space-age": "2.1.20"
+      },
+      "sha256": "6ac871bd8e2970c70e35b6750a23eb3e7a25c2d7a869a1bcd473255a88c03fb8",
+      "repository": "https://github.com/factoriolab/factoriolab",
+      "commit": "eef44c6be28e251a22a211c2302ed43368d09ed0",
+      "source": "https://github.com/factoriolab/factoriolab/blob/eef44c6be28e251a22a211c2302ed43368d09ed0/public/data/2x1/data.json"
+    },
+    "rateUnit": "per_minute",
+    "location": "aquilo",
+    "targets": [
+      {
+        "id": "quantum-processor",
+        "name": "量子处理器",
+        "rate": 12
+      }
+    ],
+    "inputs": [
+      {
+        "id": "tungsten-carbide",
+        "name": "碳化钨",
+        "rate": 8,
+        "reason": "no_available_producing_recipe_in_scope"
+      },
+      {
+        "id": "processing-unit",
+        "name": "处理器",
+        "rate": 8,
+        "reason": "no_available_producing_recipe_in_scope"
+      },
+      {
+        "id": "superconductor",
+        "name": "超导体",
+        "rate": 8,
+        "reason": "no_available_producing_recipe_in_scope"
+      },
+      {
+        "id": "carbon-fiber",
+        "name": "碳纤维",
+        "rate": 8,
+        "reason": "no_available_producing_recipe_in_scope"
+      },
+      {
+        "id": "lithium-plate",
+        "name": "锂板",
+        "rate": 16,
+        "reason": "no_available_producing_recipe_in_scope"
+      },
+      {
+        "id": "fluoroketone-cold",
+        "name": "氟酮（冷）",
+        "rate": 40.00000001,
+        "reason": "explicit_external_input"
+      }
+    ],
+    "surplus": [],
+    "steps": [
+      {
+        "id": "quantum-processor",
+        "name": "量子处理器",
+        "craftsPerMinute": 8,
+        "machine": "electromagnetic-plant",
+        "quality": "normal",
+        "modules": [],
+        "productivityBonus": 0,
+        "productivityMultiplier": 1.5,
+        "speed": 2,
+        "machines": 2,
+        "allowedLocations": [
+          "space-platform",
+          "aquilo"
+        ],
+        "machineAllowedLocations": [],
+        "inputsPerCraft": {
+          "tungsten-carbide": 1,
+          "processing-unit": 1,
+          "superconductor": 1,
+          "carbon-fiber": 1,
+          "lithium-plate": 2,
+          "fluoroketone-cold": 10
+        },
+        "outputsPerCraft": {
+          "quantum-processor": 1.5,
+          "fluoroketone-hot": 5
+        },
+        "source": "https://github.com/factoriolab/factoriolab/blob/eef44c6be28e251a22a211c2302ed43368d09ed0/public/data/2x1/data.json"
+      },
+      {
+        "id": "fluoroketone-cooling",
+        "name": "热氟酮冷却",
+        "craftsPerMinute": 3.999999999,
+        "machine": "cryogenic-plant",
+        "quality": "normal",
+        "modules": [],
+        "productivityBonus": 0,
+        "productivityMultiplier": 1,
+        "speed": 2,
+        "machines": 0.166666666625,
+        "allowedLocations": [],
+        "machineAllowedLocations": [],
+        "inputsPerCraft": {
+          "fluoroketone-hot": 10
+        },
+        "outputsPerCraft": {
+          "fluoroketone-cold": 10
+        },
+        "source": "https://github.com/factoriolab/factoriolab/blob/eef44c6be28e251a22a211c2302ed43368d09ed0/public/data/2x1/data.json"
+      }
+    ],
+    "flows": [
+      {
+        "id": "quantum-processor",
+        "name": "量子处理器",
+        "produced": 12,
+        "consumed": 0,
+        "imported": 0,
+        "target": 12,
+        "surplus": 0
+      },
+      {
+        "id": "tungsten-carbide",
+        "name": "碳化钨",
+        "produced": 0,
+        "consumed": 8,
+        "imported": 8,
+        "target": 0,
+        "surplus": 0
+      },
+      {
+        "id": "processing-unit",
+        "name": "处理器",
+        "produced": 0,
+        "consumed": 8,
+        "imported": 8,
+        "target": 0,
+        "surplus": 0
+      },
+      {
+        "id": "superconductor",
+        "name": "超导体",
+        "produced": 0,
+        "consumed": 8,
+        "imported": 8,
+        "target": 0,
+        "surplus": 0
+      },
+      {
+        "id": "carbon-fiber",
+        "name": "碳纤维",
+        "produced": 0,
+        "consumed": 8,
+        "imported": 8,
+        "target": 0,
+        "surplus": 0
+      },
+      {
+        "id": "lithium-plate",
+        "name": "锂板",
+        "produced": 0,
+        "consumed": 16,
+        "imported": 16,
+        "target": 0,
+        "surplus": 0
+      },
+      {
+        "id": "fluoroketone-cold",
+        "name": "氟酮（冷）",
+        "produced": 39.99999999,
+        "consumed": 80,
+        "imported": 40.00000001,
+        "target": 0,
+        "surplus": 0
+      },
+      {
+        "id": "fluoroketone-hot",
+        "name": "氟酮（热）",
+        "produced": 40,
+        "consumed": 39.99999999,
+        "imported": 0,
+        "target": 0,
+        "surplus": 9.99996530027e-9
+      }
+    ],
+    "maxBalanceError": 0,
+    "startupInventory": null,
+    "accountingScope": "recipe_materials_only",
+    "acquisition": [],
+    "warnings": [],
+    "assumptions": [
+      "默认普通品质产物、无插件、无研究加成；机器采用各配方首个 producer，已计入机器自带增产。显式 settings 会覆盖默认配置。",
+      "所有结果统一为每分钟。没有 location 时允许跨地点生产，步骤保留地点限制，不能把整条链解释为在同一星球生产。",
+      "外部输入和不能在所选配方范围内生产的物料作为计算边界；inputs 是边界需求，不等于这些物料能在当地开采。",
+      "优先最小化边界物品需求之和（流体权重 0.1），再最小化基础配方时间；这不是运输成本或玩家建造成本最优。"
+    ],
+    "limitations": [
+      "不计算电力、燃料、热量、腐败时效、火箭/平台运行成本或物流延迟。",
+      "循环启动库存需额外提供管道容量、设备缓存和物流周期；稳态配方无法确定。",
+      "不计算品质插件随机产物、信标、采矿研究及资源耗尽、科技解锁进度。"
+    ]
+  },
+  "barrelReturn": {
+    "provenance": {
+      "dataset": "2x1",
+      "name": "Space Age 2.1",
+      "version": {
+        "base": "2.1.20",
+        "elevated-rails": "2.1.20",
+        "quality": "2.1.20",
+        "recycler": "2.1.20",
+        "space-age": "2.1.20"
+      },
+      "sha256": "6ac871bd8e2970c70e35b6750a23eb3e7a25c2d7a869a1bcd473255a88c03fb8",
+      "repository": "https://github.com/factoriolab/factoriolab",
+      "commit": "eef44c6be28e251a22a211c2302ed43368d09ed0",
+      "source": "https://github.com/factoriolab/factoriolab/blob/eef44c6be28e251a22a211c2302ed43368d09ed0/public/data/2x1/data.json"
+    },
+    "fluid": "fluoroketone-cold",
+    "fluidName": "氟酮（冷）",
+    "rateUnit": "per_minute",
+    "fluidRate": 40.00000001,
+    "fluidPerBarrel": 50,
+    "filledBarrel": "fluoroketone-cold-barrel",
+    "barrelsPerMinute": 0.8000000002,
+    "emptyBarrelsProducedPerMinute": 0.8000000002,
+    "returnEmptyBarrels": true,
+    "newBarrelsPerMinute": 0,
+    "barrelMaterials": [
+      {
+        "id": "steel-plate",
+        "name": "钢材",
+        "rate": 0
+      }
+    ],
+    "initialBarrels": null,
+    "sourceRecipes": [
+      "fluoroketone-cold-barrel",
+      "empty-fluoroketone-cold-barrel",
+      "barrel"
+    ],
+    "note": "装桶/倒桶物流层计算，未使用插件或增产。若空桶返运，按无损闭环计算；不返运时列出每分钟需新造的空桶。initialBarrels 是给定往返周期的理论下限，未含设备缓存和安全库存。",
+    "limitations": [
+      "不包含火箭材料、火箭装载取整、燃料、平台航程、目的地生产合法性或热量需求。运输量应由生产工具的明确方案决定。"
+    ]
+  },
+  "barrelNoReturn": {
+    "provenance": {
+      "dataset": "2x1",
+      "name": "Space Age 2.1",
+      "version": {
+        "base": "2.1.20",
+        "elevated-rails": "2.1.20",
+        "quality": "2.1.20",
+        "recycler": "2.1.20",
+        "space-age": "2.1.20"
+      },
+      "sha256": "6ac871bd8e2970c70e35b6750a23eb3e7a25c2d7a869a1bcd473255a88c03fb8",
+      "repository": "https://github.com/factoriolab/factoriolab",
+      "commit": "eef44c6be28e251a22a211c2302ed43368d09ed0",
+      "source": "https://github.com/factoriolab/factoriolab/blob/eef44c6be28e251a22a211c2302ed43368d09ed0/public/data/2x1/data.json"
+    },
+    "fluid": "fluoroketone-cold",
+    "fluidName": "氟酮（冷）",
+    "rateUnit": "per_minute",
+    "fluidRate": 40.00000001,
+    "fluidPerBarrel": 50,
+    "filledBarrel": "fluoroketone-cold-barrel",
+    "barrelsPerMinute": 0.8000000002,
+    "emptyBarrelsProducedPerMinute": 0.8000000002,
+    "returnEmptyBarrels": false,
+    "newBarrelsPerMinute": 0.8000000002,
+    "barrelMaterials": [
+      {
+        "id": "steel-plate",
+        "name": "钢材",
+        "rate": 0.8000000002
+      }
+    ],
+    "initialBarrels": null,
+    "sourceRecipes": [
+      "fluoroketone-cold-barrel",
+      "empty-fluoroketone-cold-barrel",
+      "barrel"
+    ],
+    "note": "装桶/倒桶物流层计算，未使用插件或增产。若空桶返运，按无损闭环计算；不返运时列出每分钟需新造的空桶。initialBarrels 是给定往返周期的理论下限，未含设备缓存和安全库存。",
+    "limitations": [
+      "不包含火箭材料、火箭装载取整、燃料、平台航程、目的地生产合法性或热量需求。运输量应由生产工具的明确方案决定。"
+    ]
+  }
+}

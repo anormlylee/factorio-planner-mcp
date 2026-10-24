@@ -1,0 +1,42 @@
+{
+  "repository": "https://github.com/factoriolab/factoriolab",
+  "commit": "eef44c6be28e251a22a211c2302ed43368d09ed0",
+  "defaultDataset": "2x1",
+  "datasets": {
+    "2x1": {
+      "name": "Space Age 2.1",
+      "version": {
+        "base": "2.1.20",
+        "elevated-rails": "2.1.20",
+        "quality": "2.1.20",
+        "recycler": "2.1.20",
+        "space-age": "2.1.20"
+      },
+      "sha256": "6ac871bd8e2970c70e35b6750a23eb3e7a25c2d7a869a1bcd473255a88c03fb8"
+    },
+    "2.1": {
+      "name": "Factorio 2.1",
+      "version": {
+        "base": "2.1.20"
+      },
+      "sha256": "1c4bfdf597c6a7c18c0b0b8ffd2cae98c678a23c27c1e4832fe08f4d40a385a8"
+    },
+    "spa": {
+      "name": "Space Age 2.0",
+      "version": {
+        "base": "2.0.77",
+        "elevated-rails": "2.0.77",
+        "quality": "2.0.77",
+        "space-age": "2.0.77"
+      },
+      "sha256": "d3220c4ddf415eb7fc288c26d26bf807e0697ade161d6af8c5bd225e17afaff2"
+    },
+    "2.0": {
+      "name": "Factorio 2.0",
+      "version": {
+        "base": "2.0.77"
+      },
+      "sha256": "d48a72878239f1923a02e8906f4ee954d94bd1f0f57f25806f57e0be3be42762"
+    }
+  }
+}

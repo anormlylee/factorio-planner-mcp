@@ -1,0 +1,7 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "extends": "./wrangler.jsonc",
+  "name": "factorio-planner-mcp-selfhost",
+  "routes": [],
+  "workers_dev": true
+}

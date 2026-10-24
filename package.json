@@ -1,0 +1,42 @@
+{
+  "name": "factorio-planner-mcp",
+  "version": "0.2.0",
+  "private": true,
+  "repository": { "type": "git", "url": "https://github.com/anormlylee/factorio-planner-mcp.git" },
+  "homepage": "https://factorio-mcp.anormlylee.com/",
+  "bugs": "https://github.com/anormlylee/factorio-planner-mcp/issues",
+  "type": "module",
+  "imports": {
+    "#catalog-data": "./src/data-node.js",
+    "#solver": "./src/solver-node.js"
+  },
+  "overrides": { "undici": "7.30.1" },
+  "description": "Read-only Factorio recipe and production MCP service using pinned FactorioLab data",
+  "license": "GPL-3.0-only",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node src/http.js",
+    "start:stdio": "node src/stdio.js",
+    "test": "node --test tests/*.test.js",
+    "example": "node examples/promethium.js",
+    "check": "node --check src/catalog.js && node --check src/calculator.js && node --check src/server.js && node --check src/http.js && npm test",
+    "prepare:worker": "node scripts/prepare-worker.js",
+    "dev:worker": "wrangler dev",
+    "test:worker": "node scripts/test-worker.mjs",
+    "deploy": "wrangler deploy",
+    "deploy:self": "wrangler deploy --config wrangler.self-host.jsonc",
+    "sync:data": "node scripts/sync-data.mjs",
+    "build:worker": "wrangler deploy --dry-run --outdir dist"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "express": "5.1.0",
+    "glpk.js": "5.0.0",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "wrangler": "4.152.0"
+  }
+}
