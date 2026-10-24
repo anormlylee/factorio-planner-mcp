@@ -1,7 +1,33 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "extends": "./wrangler.jsonc",
   "name": "factorio-planner-mcp-selfhost",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-10-24",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "workers_dev": true,
+  "preview_urls": false,
+  "build": {
+    "command": "npm run prepare:worker"
+  },
+  "alias": {
+    "#catalog-data": "./src/data-worker.js",
+    "#solver": "./src/solver-worker.js"
+  },
   "routes": [],
-  "workers_dev": true
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 0.1
+  },
+  "ratelimits": [
+    {
+      "name": "MCP_RATE_LIMITER",
+      "namespace_id": "1001",
+      "simple": {
+        "limit": 120,
+        "period": 60
+      }
+    }
+  ]
 }

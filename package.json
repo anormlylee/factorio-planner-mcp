@@ -28,7 +28,8 @@
     "deploy": "wrangler deploy",
     "deploy:self": "wrangler deploy --config wrangler.self-host.jsonc",
     "sync:data": "node scripts/sync-data.mjs",
-    "build:worker": "wrangler deploy --dry-run --outdir dist"
+    "build:worker": "wrangler deploy --dry-run --outdir dist",
+    "build:self": "wrangler deploy --dry-run --config wrangler.self-host.jsonc --outdir dist/self-host"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "1.32.2",
